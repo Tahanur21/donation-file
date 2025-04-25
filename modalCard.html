@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>History Page</title>
+        <title>Modal Card</title>
         <!-- tailwind cdn -->
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
@@ -33,7 +33,17 @@
             }
          </style>
     </head>
-<body>
-    
+<body class="max-w-screen-xl mx-auto mb-20 flex justify-center items-center mt-28">
+    <div class="card bg-base-100 px-10 shadow-xl">        
+        <div class="card-body items-center text-center">
+          <h2 class="card-title text-4xl text-black font-bold">Congrates!</h2>
+          <img class="py-4" src="assets/coin.png" alt="">
+          <p>You Have Donated for Humankind</p>
+          <h2 class="font-bold py-3">Successfully</h2>
+          <div class="card-actions">
+            <button class="btn bg-gray-200 border-0 text-black rounded-xl">Close Confirmation</button>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
