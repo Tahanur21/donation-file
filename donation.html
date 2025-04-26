@@ -37,7 +37,7 @@
 
 <body class="font-lexend">
   <!-- headere section -->
-  <header class="bg-[#F9F7F3] py-4 mb-12 sticky">
+  <header class="bg-[#F9F7F3] py-4 mb-12">
     <div class="max-w-screen-xl mx-auto">
       <!-- nav bar -->
       <div class="navbar">
@@ -51,19 +51,19 @@
         <!-- functional money -->
         <div class="navbar-end gap-3">
           <img src="assets/coin.png" alt="">
-          <p class="font-bold">5500 BDT</p>
+          <p id="header-money-screen" class="font-bold">5500 BDT</p>
         </div>
       </div>
     </div>
   </header>
   <!-- main section -->
   <main class="max-w-screen-xl mx-auto mb-20">
-    <section class="">
       <!-- switch btn -->
       <div class="flex justify-center items-center space-x-8 mb-12">
-        <a class="btn bg-[#B4F461]">Donation</a>
-        <a class="btn bg-[#ffff]">History</a>
+        <a id="donation-btn" class="btn bg-[#B4F461]">Donation</a>
+        <a id="history-btn" class="btn bg-[#ffff]">History</a>
       </div>
+    <section id="donate-section" class="">
       <!-- hero section with 3 card -->
       <div id="donation-container" class="space-y-6">
         <!-- first card -->
@@ -72,9 +72,9 @@
             <img src="assets/noakhali.png" class="w-[512px] rounded-lg shadow-2xl" />
             <div class="flex flex-col gap-4">
               <!-- money card -->
-              <div class="flex items-center gap-4 bg-gray-200 w-[120px] p-2 rounded-xl">
+              <div class="flex items-center gap-4 bg-gray-200 w-[150px] p-2 rounded-xl">
                 <img src="assets/coin.png">
-                <div>0 BDT</div>
+                <div id="first-money-screen">0</div><span>BDT</span>
               </div>
               <h1 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
               <p class="py-4">
@@ -83,21 +83,21 @@
                 small, makes difference. Please join us in supporting the relief efforts and making a positive impact on
                 the lives of those in need.
               </p>
-              <input type="number" placeholder="Write Donation Amount"
+              <input id="first-input" type="number" autocomplete="off" placeholder="Write Donation Amount"
                 class="p-4 text-center border border-gray-300 rounded-lg" />
-              <button class="btn  bg-[#B4F461]">Write Donation Amount</button>
+              <button onclick="my_modal_5.showModal()" id="first-btn" class="btn bg-[#B4F461]">Write Donation Amount</button>
             </div>
           </div>
         </div>
         <!-- second card -->
         <div class="p-5 border border-gray-200 rounded-md">
           <div class="hero-content flex-col lg:flex-row space-x-4">
-            <img src="assets/noakhali.png" class="w-[512px] rounded-lg shadow-2xl" />
+            <img src="assets/feni.png" class="w-[512px] rounded-lg shadow-2xl" />
             <div class="flex flex-col gap-4">
               <!-- money card -->
               <div class="flex items-center gap-4 bg-gray-200 w-[140px] p-2 rounded-xl">
                 <img src="assets/coin.png">
-                <div>600 BDT</div>
+                <div id="second-money-screen">600</div><span>BDT</span>
               </div>
               <h1 class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
               <p class="py-4">
@@ -107,21 +107,21 @@
                 aftermath of this disaster. Every contribution counts towards making a real difference. Please consider
                 donating today to assist those in urgent need.
               </p>
-              <input type="number" placeholder="Write Donation Amount"
+              <input id="second-input" type="number" autocomplete="off" placeholder="Write Donation Amount"
                 class="p-4 text-center border border-gray-300 rounded-lg" />
-              <button class="btn  bg-[#B4F461]">Write Donation Amount</button>
+              <button onclick="my_modal_5.showModal()" id="second-btn" class="btn  bg-[#B4F461]">Write Donation Amount</button>
             </div>
           </div>
         </div>
         <!-- third card -->
         <div class="p-5 border border-gray-200 rounded-md">
           <div class="hero-content flex-col lg:flex-row space-x-4">
-            <img src="assets/noakhali.png" class="w-[512px] rounded-lg shadow-2xl" />
+            <img src="assets/quota-protest.png" class="w-[512px] rounded-lg shadow-2xl" />
             <div class="flex flex-col gap-4">
               <!-- money card -->
-              <div class="flex items-center gap-4 bg-gray-200 w-[140px] p-2 rounded-xl">
+              <div class="flex items-center gap-4 bg-gray-200 w-[160px] p-2 rounded-xl">
                 <img src="assets/coin.png">
-                <div>2400 BDT</div>
+                <div id="third-money-screen">2400</div><span>BDT</span>
               </div>
               <h1 class="text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
               <p class="py-4">
@@ -132,22 +132,41 @@
                 their suffering and aiding in their recovery. Please consider making a donation to support these brave
                 individuals in their time of need.
               </p>
-              <input type="number" placeholder="Write Donation Amount"
+              <input id="third-input" autocomplete="off" type="number" placeholder="Write Donation Amount"
                 class="p-4 text-center border border-gray-300 rounded-lg" />
-              <button class="btn  bg-[#B4F461]">Write Donation Amount</button>
+              <button onclick="my_modal_5.showModal()" id="third-btn" class="btn  bg-[#B4F461]">Write Donation Amount</button>
             </div>
           </div>
         </div>
       </div>
       <!-- history site -->
-       <div class="hidden history-container">
-
-       </div>
     </section>
+    <section class="history-section">
+      <div id="history-container" class="hidden history-container">
+
+      </div>
+    </section>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box flex flex-col justify-center items-center">
+    <h2 class="card-title text-4xl text-black font-bold">Congrates!</h2>
+    <img class="py-4" src="assets/coin.png" alt="">
+    <p class="py-4">You Have Donated for Humankind</p>
+    <h2 class="font-bold py-3">Successfully</h2>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn bg-gray-200 border-0 text-black rounded-xl">Close Confirmation</button>
+      </form>
+    </div>
+  </div>
+</dialog>
   </main>
   <footer class="bg-[#F9F7F3] py-12">
 
   </footer>
+  <!-- js link -->
+   <script src="js file/utilities.js"></script>
+   <script src="js file/function.js"></script>
 </body>
 
 </html>
