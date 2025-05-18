@@ -7,10 +7,10 @@ document.getElementById("first-btn").addEventListener("click",function(event){
         alert("Wrong input");
         return;
     }
-    if(isNaN(firsInput)){
+    else if(isNaN(firsInput)){
         alert("Please input a number");
     }
-    if(firsInput>0){
+    else if(firsInput>0){
         let balance = getTextInputValueId("first-money-screen");
         let headBalance = getTextInputValueId("header-money-screen");
         let newBalance = balance + firsInput;
@@ -25,6 +25,8 @@ document.getElementById("first-btn").addEventListener("click",function(event){
         alert("Wrong input");
         return
     }
+  
+
 })
 // second btn
 document.getElementById("second-btn").addEventListener("click",function(event){

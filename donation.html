@@ -42,7 +42,7 @@
       <!-- nav bar -->
       <div class="navbar">
         <div class="navbar-start">
-          <a class="btn bg-[#B4F461]">Blog</a>
+          <a id="blog-btn" class="btn bg-[#B4F461]">Blog</a>
         </div>
         <div class="navbar-center gap-4">
           <img src="assets/logo.png" alt="">
@@ -61,7 +61,7 @@
       <!-- switch btn -->
       <div class="flex justify-center items-center space-x-8 mb-12">
         <a id="donation-btn" class="btn bg-[#B4F461]">Donation</a>
-        <a id="history-btn" class="btn bg-[#ffff]">History</a>
+        <a id="history-btn" class="btn bg[#ffff]">History</a>
       </div>
     <section id="donate-section" class="">
       <!-- hero section with 3 card -->
@@ -141,9 +141,11 @@
       </div>
       <!-- history site -->
     </section>
-    <section class="history-section">
-      <div id="history-container" class="hidden history-container">
-
+    <section id="history-section" class="hidden">
+      <div id="history-container" class="">
+        <h1 class="text-3xl font-bold text-center mt-20">History of Donation</h1>
+        <div id="history-list" class="mt-16 grid grid-cols-2 lg:grid-cols-1 gap-3">
+        </div>
       </div>
     </section>
 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
@@ -167,6 +169,18 @@
   <!-- js link -->
    <script src="js file/utilities.js"></script>
    <script src="js file/function.js"></script>
+   <script src="js file/showSectionBtn.js"></script>
+   <script src="js file/historyFunction.js"></script>
+   <Script>
+            let homePage = document.getElementById("blog-btn");
+
+            homePage.addEventListener("click", function(event){
+            event.preventDefault;
+          let homePage = window.location.href = "blogSite.html";
+
+          
+})
+</Script>
 </body>
 
 </html>
