@@ -21,10 +21,3 @@ donationBtn.addEventListener("click",function(event){
         historyBtn.classList.remove("bg-[#B4F461]");
         historyBtn.classList.add("bg-[#ffff]");
 })
-
-let blogPage = document.getElementById("blog-button");
-
-blogPage.addEventListener("click", function(event){
-    event.preventDefault;
-    console.log("Hello");
-})
